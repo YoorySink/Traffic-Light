@@ -1,0 +1,47 @@
+int ledRed[]    = {2, 5, 8, 11};
+int ledYellow[]  = {3, 6, 9, 12};
+int ledGreen[] = {4, 7, 10, 13};
+int jumlahLampu = 4;
+
+void semuaMerah() {
+  for (int i = 0; i < jumlahLampu; i++) {
+    digitalWrite(ledGreen[i], LOW);
+    digitalWrite(ledYellow[i], LOW);
+    digitalWrite(ledRed[i], HIGH);
+  }
+}
+
+void kelapkelip(int i) {
+  for (int k = 0; k < 3; k++) {
+    digitalWrite(ledYellow[i], HIGH);
+    delay(300);
+    digitalWrite(ledYellow[i], LOW);
+    delay(300);
+  }
+}
+
+void setup() {
+  for (int i = 0; i < jumlahLampu; i++) {
+    pinMode(ledGreen[i], OUTPUT);
+    pinMode(ledYellow[i], OUTPUT);
+    pinMode(ledRed[i], OUTPUT);
+  }
+}
+void pengaktifan(int i){
+  	semuaMerah();
+    digitalWrite(ledRed[i], LOW);
+    kelapkelip(i);
+    digitalWrite(ledYellow[i], HIGH);
+    delay(2000);
+    digitalWrite(ledYellow[i], LOW);
+    digitalWrite(ledGreen[i], HIGH);
+    delay(5000);
+    digitalWrite(ledGreen[i], LOW);
+}
+void loop() {
+  semuaMerah();
+  delay(1000);
+  for (int i = 0; i < jumlahLampu; i++) {
+    pengaktifan(i);
+  }
+}

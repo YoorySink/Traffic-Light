@@ -1,5 +1,5 @@
 # Pedestrian Traffic-Light
-Penerapan Kendali GPIO pada Traffic Light 4 Arah dan fitur interrupt Dengan Arduino Uno
+Penerapan Kendali GPIO pada Traffic Light dan fitur interrupt Dengan Arduino Uno
 
 link simulasi
 https://www.tinkercad.com/things/kYIOAVmf4EA-stunning-bombul-interrupt?sharecode=7-rWuwETa3NNyUm0u0nTLx388Uttz7unHC3xo9XfXxA
